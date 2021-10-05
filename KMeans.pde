@@ -11,11 +11,7 @@ class KMeans
     cts = new ArrayList<Cluster>();
     while(k-->0)
     {
-      
-      //colorMode(HSB, 360, 100, 100);
       cts.add(new Cluster(pts.get((int)random(s)), color(random(360),100,100)));
-      
-      //colorMode(RGB, 255);
     }
   }
   
@@ -57,7 +53,7 @@ class KMeans
       {
         dif+= c.meanify();
       }
-    if(dif<2)
+    if(dif<1)
       return true;
     return false;
   }
